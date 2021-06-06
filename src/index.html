@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/root.css" />
+    <title class="title">Forest Player</title>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="tasks">
+        <img src="../data/minimize.png" alt="minimize" class="minimize" />
+        <img src="../data/close.png" alt="close" class="close" />
+      </div>
+      <div class="top-title">
+        <h2></h2>
+      </div>
+      <div class="menu-btn">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+        <svg
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <path
+                class="bar-one"
+                d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z"
+              />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                class="bar-two"
+                d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z"
+              />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                class="bar-three"
+                d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+			C512,404.954,503.046,396,492,396z"
+              />
+            </g>
+          </g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+        </svg>
+      </div>
+    </nav>
+    <nav class="side-bar">
+      <div class="logo">
+        <img src="../data/logo.png" alt="logo" />
+      </div>
+      <div class="menu">
+        <ul>
+          <a href="#" onclick="showPages(0)">
+            <img class="home" src="../data/home.png" alt="home" />
+            <li>Home</li>
+          </a>
+          <a href="#" onclick="showPages(1)">
+            <img
+              class="music"
+              src="../data/music.png"
+              alt="music"
+              onclick="showPages(0)"
+            />
+            <li>Music Player</li>
+          </a>
+          <a href="#" onclick="showPages(2)">
+            <img
+              class="video"
+              src="../data/video.png"
+              alt="video"
+              onclick="showPages(0)"
+            />
+            <li>Video Player</li>
+          </a>
+          <a href="#" onclick="showPages(3)">
+            <img
+              class="info"
+              src="../data/info.png"
+              alt="info"
+              onclick="showPages(0)"
+            />
+            <li>Media Info</li>
+          </a>
+        </ul>
+      </div>
+      <div class="about">
+        <a class="about-btn" href="#">About</a>
+      </div>
+    </nav>
+    <div class="main-container">
+      <div class="home tabs">
+        <h1 class="user-name"></h1>
+        <p>Forest Player is simple media player app</p>
+        <p>Based on electron js and open source</p>
+        <p>Coded with html and css and javascript</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/abdelmalek.tammal/">
+            <img class="fb-main" src="../data/facebook.png" alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/malick_tammal/">
+            <img class="ig-main" src="../data/instagram.png" alt="instagram" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCxP3N9RP-lCJeTi04hazsZw">
+            <img class="yt-main" src="../data/youtube.png" alt="youtube" />
+          </a>
+          <a href="#">
+            <img class="ws-main" src="../data/website2.png" alt="website" />
+          </a>
+        </div>
+      </div>
+      <div class="music-show tabs">
+        <div class="select-file">
+          <img src="../data/open.png" alt="open" />
+        </div>
+        <img
+          class="placeholder"
+          src="../data/music-placeholder.png"
+          alt="music-placeholder"
+        />
+        <h2 class="music-title">Music Title</h2>
+        <p class="artist">Artist</p>
+        <p class="album">Album</p>
+        <div class="dock">
+          <div class="music-tasks">
+            <img class="play-btn" src="../data/play.png" alt="play" />
+            <img class="pause-btn" src="../data/pause.png" alt="pause" />
+          </div>
+          <div class="progress-container">
+            <span class="progress"></span>
+          </div>
+          <div class="restart-btn">
+            <img src="../data/restart.png" alt="restart" />
+          </div>
+          <div class="forward-btn">
+            <img src="../data/forward.png" alt="forward" />
+          </div>
+          <div class="backward-btn">
+            <img src="../data/backward.png" alt="backward" />
+          </div>
+        </div>
+        <div class="music-control">
+          <input class="control" type="range" min="0" max="100" value="50" />
+          <p class="pers"></p>
+        </div>
+        <div class="music-toggle">
+          <img src="../data/volume.png" alt="volume" />
+        </div>
+      </div>
+      <div class="video-show tabs">
+        <h3 class="audio-video-text">
+          To play audio files please go to music page
+        </h3>
+        <div class="select-video">
+          <img src="../data/open.png" alt="open" />
+        </div>
+        <video
+          class="video-player"
+          poster="../data/video-placeholder.jpg"
+          width="80%"
+          height="80%"
+          controls
+          disablepictureinpicture
+          controlslist="nodownload"
+        >
+          <source class="video-player-source" />
+        </video>
+      </div>
+      <div class="info tabs">
+        <h1>Information</h1>
+        <div class="info-container">
+          <p>Audio files files supported :</p>
+          <p>
+            "webm mkv flv vob ogg ogv drc gif gifv mng avi MTS M2TS TS mov qt
+            wmv yuv rm rmvb viv asf amv mp4 m4p m4v mpg mp2 mpeg mpe mpv mpg
+            mpeg m2v m4v svi 3gp 3g2 mxf roq nsv flv f4v f4p f4a f4b"
+          </p>
+          <p>Video files files supported :</p>
+          <p>
+            "3gp aa aac aax act aiff alac amr ape au awb dss dvf flac gsm iklax
+            ivs m4a m4b m4p mmf mp3 mpc msv ogg oga mogg opus org ra rm raw rf64
+            sln tta voc vox wav wma wv webm 8svx cda"
+          </p>
+          <p>This app is open source</p>
+          <p>Open source link</p>
+          <a href="#">
+            <img class="gh" src="../data/github.png" alt="github" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="about-page">
+      <div class="hide-about">
+        <img src="../data/hide.png" alt="hide" />
+      </div>
+      <h1>About The Developer</h1>
+      <div class="about-container">
+        <img class="creator-img" src="../data/malick.jpg" alt="the creator" />
+        <div class="desk">
+          <h2>Abdel Malek Tammal</h2>
+          <p>I am 18 years old a web developer / designer</p>
+          <p>Based in algeria, i truly love everthing realted to web</p>
+          <p>mostly designing an developing websites / applications.</p>
+        </div>
+      </div>
+      <div class="social-container">
+        <a href="https://www.facebook.com/abdelmalek.tammal/">
+          <img class="fb" src="../data/facebook-small.png" alt="facebook" />
+        </a>
+
+        <a href="https://www.instagram.com/malick_tammal/">
+          <img class="ig" src="../data/instagram-small.png" alt="instagram" />
+        </a>
+
+        <a href="https://codepen.io/ADAMSKIDZ">
+          <img class="cp" src="../data/codepen.png" alt="codepen" />
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCxP3N9RP-lCJeTi04hazsZw">
+          <img class="yt" src="../data/youtube-small.png" alt="youtube" />
+        </a>
+
+        <a href="http://malicktammal.netlify.app/">
+          <img class="ws" src="../data/website.png" alt="website" />
+        </a>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/tasks.js"></script>
+    <script src="./js/music-player.js"></script>
+    <script src="./js/video-player.js"></script>
+  </body>
+</html>

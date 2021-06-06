@@ -1,0 +1,68 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-app-region: drag;
+    background: url(../../data/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    backdrop-filter: brightness(0.8) blur(5px);
+}
+.splash-logo {
+    width: 15rem;
+    height: 21rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2em;
+}
+.st0 {
+    fill: var(--text-color);
+}
+#F polygon {
+    animation: svg-f 1s 0.5s linear forwards , loading 1.2s 2s linear infinite;
+    opacity: 0;
+}
+@keyframes svg-f {
+    from {
+    transform: translateY(-92em);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+#P polygon,rect {
+    animation: svg-p 1s 0.5s linear forwards, loading 1.2s 2s linear infinite;
+    opacity: 0;
+}
+@keyframes svg-p {
+    from {
+    transform: translateY(92em);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+@keyframes loading {
+    0% {
+        stroke: var(--main-color-light);
+        stroke-width: 30px;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+    }
+    50% {
+        stroke: var(--main-color-light);
+        stroke-width: 30px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2000;
+    }
+    100% {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+    }
+}

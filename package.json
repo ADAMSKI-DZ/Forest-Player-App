@@ -1,0 +1,21 @@
+{
+  "name": "forest-player",
+  "version": "1.0.0",
+  "description": "Simple media player build with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win-32": "electron-packager . forest-player --overwrite --asar=true --platform=win32 --arch=ia32 --icon=data/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Forest Player\"",
+    "package-win-64": "electron-packager . forest-player --overwrite --asar=true --platform=win32 --arch=x64 --icon=data/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Forest Player\""
+  },
+  "author": "Malick Tammal <malick.tammal15@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron-packager": "^15.2.0",
+    "jsmediatags": "^3.9.7",
+    "username": "^5.1.0"
+  },
+  "devDependencies": {
+    "electron": "^12.0.10"
+  }
+}
