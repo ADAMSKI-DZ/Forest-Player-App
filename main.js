@@ -17,7 +17,7 @@ app.on("ready", () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      //devTools: false,
+      devTools: false,
       enableRemoteModule: true,
       preload: path.join(__dirname, "preload.js"),
     },
@@ -34,15 +34,27 @@ app.on("ready", () => {
       devTools: false,
     },
   });
-  //globalShortcut.register("CmdOrCtrl+R", () => {});
+  globalShortcut.register("CmdOrCtrl+R", () => {});
   splashScreen.loadURL(`file://${__dirname}/src/splash.html`);
-  mainWindow.webContents.on("did-finish-load", () => {
-    setTimeout(() => {
-      if (splashScreen) {
-        splashScreen.close();
-      }
-      mainWindow.show();
-    }, 2000);
+  ipc.on("showSplash", () => {
+    mainWindow.webContents.on("did-finish-load", () => {
+      setTimeout(() => {
+        if (splashScreen) {
+          splashScreen.close();
+        }
+        mainWindow.show();
+      }, 5000);
+    });
+  });
+  ipc.on("hideSplash", () => {
+    mainWindow.webContents.on("did-finish-load", () => {
+      setTimeout(() => {
+        if (splashScreen) {
+          splashScreen.close();
+        }
+        mainWindow.show();
+      }, 1000);
+    });
   });
 });
 

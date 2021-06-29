@@ -1,6 +1,8 @@
-const { ipcRenderer } = require("electron");
+const { ipcRenderer, ipcMain } = require("electron");
 const ipc = ipcRenderer;
 
+
+//! close and minimize buttons function
 const closeBtn = document.querySelector(".close");
 const minimizeBtn = document.querySelector(".minimize");
 
@@ -11,6 +13,8 @@ minimizeBtn.addEventListener("click", () => {
   ipc.send("minimize-the-app");
 });
 
+
+//! function to set the app as default app
 const videoHide = document.querySelector(".video-show");
 var data = ipcRenderer.sendSync("get-file-data");
 setTimeout(() => {
@@ -24,3 +28,28 @@ setTimeout(() => {
     videoHide.classList.add("play-it");
   }
 }, 2500);
+
+
+// ! add algorithm to take long time to load in the first time app launch
+
+let splashScreen = localStorage.getItem("splashScreen");
+
+const showSplashScreen = () => {
+  ipc.send("showSplash");
+  localStorage.setItem("splashScreen", "show");
+};
+const hideSplashScreen = () => {
+  ipc.send("hideSplash");
+  ipcMain.removeListener;
+  localStorage.setItem("splashScreen", "hide");
+};
+
+function loading() {
+  splashScreen = localStorage.getItem("splashScreen");
+  if (splashScreen !== "show") {
+    showSplashScreen();
+  } else {
+    hideSplashScreen();
+  }
+}
+loading();
