@@ -58,19 +58,20 @@ const facebookLink = document.querySelector(".fb");
 const instagramLink = document.querySelector(".ig");
 const youtubeLink = document.querySelector(".yt");
 const websiteLink = document.querySelector(".ws");
-const twitterLink = document.querySelector(".tw");
-const codepenLink = document.querySelector(".cp");
+
 const githubLink = document.querySelector(".gh");
+
 const facebookMainLink = document.querySelector(".fb-main");
 const instagramMainLink = document.querySelector(".ig-main");
 const youtubeMainLink = document.querySelector(".yt-main");
 const websiteMainLink = document.querySelector(".ws-main");
+const codepenLink = document.querySelector(".cp");
 
 facebookLink.addEventListener("click", () => {
   shell.openExternal("https://www.facebook.com/abdelmalek.tammal/");
 });
 instagramLink.addEventListener("click", () => {
-  shell.openExternal("https://www.instagram.com/malick_tammal/");
+  shell.openExternal("https://www.instagram.com/adamski_setups/");
 });
 youtubeLink.addEventListener("click", () => {
   shell.openExternal(
@@ -78,23 +79,21 @@ youtubeLink.addEventListener("click", () => {
   );
 });
 websiteLink.addEventListener("click", () => {
-  shell.openExternal("https://www.google.com/");
+  shell.openExternal("https://malicktammal.netlify.app/");
 });
-twitterLink.addEventListener("click", () => {
+
+githubLink.addEventListener("click", () => {
   shell.openExternal("https://www.facebook.com/abdelmalek.tammal/");
 });
 codepenLink.addEventListener("click", () => {
   shell.openExternal("https://codepen.io/ADAMSKIDZ");
-});
-githubLink.addEventListener("click", () => {
-  shell.openExternal("https://www.facebook.com/abdelmalek.tammal/");
 });
 
 facebookMainLink.addEventListener("click", () => {
   shell.openExternal("https://www.facebook.com/abdelmalek.tammal/");
 });
 instagramMainLink.addEventListener("click", () => {
-  shell.openExternal("https://www.instagram.com/malick_tammal/");
+  shell.openExternal("https://www.instagram.com/adamski_setups/");
 });
 youtubeMainLink.addEventListener("click", () => {
   shell.openExternal(
@@ -102,5 +101,5 @@ youtubeMainLink.addEventListener("click", () => {
   );
 });
 websiteMainLink.addEventListener("click", () => {
-  shell.openExternal("https://www.google.com/");
+  shell.openExternal("https://forest-player.netlify.app/");
 });
